@@ -15,6 +15,10 @@ function App() {
     }
   }
 
+  const clearAllItems = () => {
+    setItems([])
+  }
+
   return <>
     <section className='main-div'>
       <h2 className='heading'>TO-DO LIST</h2>
@@ -36,6 +40,7 @@ function App() {
       </div>
       {items.length > 0 && <div>
         <List className='list' items={items} />
+        <button onClick={clearAllItems}>Clear All Items</button>
       </div>}
     </section>
   </>
